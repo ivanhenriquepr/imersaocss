@@ -5,14 +5,47 @@ box-sizing: border-box;
 }
 
 body {
-  background-image: url("https://lh3.googleusercontent.com/81KtPLO97ghFCgOLWtsrdF8hUndCcWavJOQ-s5wvmuV3XuL0N0v4c_jL5nMb1TZFNtc6EaVCMFnALtlxNRVnPsV9yC0VsgFm0czsz7geDbT9W2blhAvNX6FPckjJLc3xZwviiVXEnc8zK5crP7m11NgM100s2q8b0mMT1l7axZzcmLhZ6rJM3K2UzMkdvAEnnB0IJvmiBm7cBb8YuMVhZ9r-nxv9Ev2G9RQGQKStaS6KVWJHSvzIYP1YQEPGImrFyHX7sfvb7CdahP8FOxPSSg1Gvk6h--V_XymrDN9CBGZJZCurv9t_EODccZ4TVf7VUyOrpTWoXLcq1QL6G2hFSzYwstzi1nENhNnisxs1y70mN-UOY0L4mPgwH6n0Yr492zx38ZC9TT439dSuqWNpGNPGaMX9qtZKksyRnHKqCe6VjiRDv6J1q6izY5sTJ3jcGjEj0TsvSChahq8UtuwCeRjAWnlVBhoFwCxCGFhKXkKMbPxc2nFvz-VIxr-d9sug-EJk8KTCcmHvKQr5hFwTCKJaAcCHMqXciPZXKbJ8vjxcFL35rxp_9s6LFaKpusnw4RpEHto_5QSJlVmVWu-LzHr9GmxCcQduaPM1Bv4EFxUISS9tyAsjvRi8IIxteuZf7M1RwygTxN3RMIX7u_PErQ9ujSnllurLXC6EZyNGtL10bhfeO9Y0ZcAgojnH=w300-h168-no?authuser=0");
+  background-image: url("../ft/fundo.jpg");
   font-family: Arial;
   background-size: aut 100vh;
-  height: 100vh
+  height: 100vh;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* se a tela tiver pelo menos 600px vai carregar estes estilos */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* se a tela tiver pelo menos 1200px vai carregar estes estilos */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 
 .menu {
-  background-color: whitesmoke;
+  background-color: lightblue;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -22,6 +55,11 @@ body {
 
 .menu li {
   list-style: none;
+}
+
+.menu a {
+display: block;
+padding: 10px 20px;
 }
 
 a {
@@ -37,15 +75,62 @@ a:hover {
 .site-title {
   text-align: center;
   color: white;
-  font-size: 50px;
+  box-shadow: 10px 10px rgb(16, 32, 39);
+  border: 4px ridge rgb(45, 34, 202);
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Yellowtail', cursive;
 }
 
 .site-subtitle {
  font-style: italic;
+ font-family: 'Cabin Sketch', cursive;
  font-size: 30px;
 }
 
+.portifolio h2 {
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 1em;
+}
+
+.portifolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portifolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(3,240px);
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+    align-content:unset ;
+  }
+}  
+
+.portifolio figure {
+  text-align: center;
+}
+
 .img-portfolio {
-  height: 180px;
-  width: 180px;
+  height: 200px;
+  width: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.portifolio {
+  padding: 2em;
+  font-size: 25px;
+  color: white;
+  height: 100vh;
 }
