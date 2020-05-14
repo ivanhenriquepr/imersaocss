@@ -90,13 +90,15 @@ a:hover {
  font-size: 30px;
 }
 
+.contato h2,
 .portifolio h2 {
   font-family: 'Fredericka the Great', cursive;
   color: white;
   font-size: 50px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
+.contato,
 .portifolio .grid {
   display: grid;
   gap: 2em;
@@ -113,7 +115,7 @@ a:hover {
     grid-template-columns: repeat(3,240px);
     justify-content: center;
     height: calc(100vh - 8em - 48px);
-    align-content:unset ;
+    align-content: center ;
   }
 }  
 
@@ -122,15 +124,30 @@ a:hover {
 }
 
 .img-portfolio {
-  height: 200px;
-  width: 240px;
+  height: 160px;
+  width: 180px;
   object-fit: cover;
   object-position: center;
 }
 
+.contato,
 .portifolio {
   padding: 2em;
-  font-size: 25px;
+  font-size: 21px;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.contato a {
+  color:rgb(54, 248, 255) ;
+  font-size: 4em;
+}
+
+.contato a:hover {
+text-decoration: none;
+text-shadow: 5px 5px 5px rgb(191, 61, 214);
+}
+
+.contato .icons {
+  text-align: center;
 }
