@@ -9,7 +9,7 @@ body {
   font-family: Arial;
   background-size: aut 100vh;
   height: 100vh;
-  font-size: 12px;
+  font-size: 8px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -46,6 +46,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -60,6 +61,13 @@ header {
 .menu a {
 display: block;
 padding: 10px 20px;
+font-size: 17px;
+transition: background-color 1s,color 1.5s;
+}
+
+.menu a:hover {
+  background-color: rgb(0, 195, 255);
+  color: rgb(255, 251, 0);
 }
 
 a {
@@ -71,16 +79,32 @@ a:hover {
   text-decoration: underline; 
 }
 
+.titulo {
+transform: scale(0.2) translateY(50vh);
+opacity: 0;
+
+animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+
+100% {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+}
+
 .site-subtitle,
 .site-title {
   text-align: center;
   color: white;
   box-shadow: 10px 10px rgb(16, 32, 39);
-  border: 4px ridge rgb(45, 34, 202);
+  border: 8px ridge rgb(45, 34, 202);
 }
 
 .site-title {
-  font-size: 4em;
+  font-size: 5em;
   font-family: 'Yellowtail', cursive;
 }
 
@@ -127,7 +151,12 @@ a:hover {
   height: 160px;
   width: 180px;
   object-fit: cover;
-  object-position: center;
+  object-position: left bottom;
+  transition: trasform 100ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.2);
 }
 
 .contato,
@@ -141,8 +170,10 @@ a:hover {
 .contato a {
   color:rgb(54, 248, 255) ;
   font-size: 4em;
+  transition: text-shadow 0.5s;
 }
 
+.contato a:active,
 .contato a:hover {
 text-decoration: none;
 text-shadow: 5px 5px 5px rgb(191, 61, 214);
